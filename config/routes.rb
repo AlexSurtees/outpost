@@ -14,9 +14,12 @@ Rails.application.routes.draw do
 
   get '/dashboard/review', to: 'dashboard#review'
 
+  get '/dashboard/fen', to: 'dashboard#fen'
+
   get '/about', to: 'about#index'
 
   get '/about/detail', to: 'about#detail'
+
 
   root to: redirect('/about', status: 302)
 end

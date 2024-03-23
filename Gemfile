@@ -75,3 +75,7 @@ gem 'devise'
 gem 'httparty'
 
 gem 'jsbundling-rails'
+
+gem 'pgn'
+
+gem 'jquery-rails'

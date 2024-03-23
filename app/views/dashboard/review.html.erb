@@ -2,7 +2,21 @@
 <%= stylesheet_link_tag "chessground.brown", :media => "all" %>
 <%= stylesheet_link_tag "chessground.cburnett", :media => "all" %>
 
-<div id='chess-board' class='h-96 w-96'>
+<div class='font-header text-5xl text-[#732a49] pb-10'> Game Review </div> 
+<div class='flex'>
+<div id='chess-board' class='h-96 w-96'></div>
+<div class='flex h-full w-72 pl-10'>
+<textarea id="message" class="flex h-full p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Analysis..."></textarea>
+</div>
 </div>
 
-<%= javascript_include_tag 'test' %>
+<%= javascript_include_tag 'review_board' %>
+
+<button id="nextMove"> Next </button>
+<button id="previousMove"> Previous </button>
+<select id="tag">
+    <option value = "calculation"> Calculation Error </option>
+    <option value = "positional"> Positional Error </option>
+    <option value = "psychological"> Psychological Error </option>
+</select>
+<button id="addTag"> Add tag </button>

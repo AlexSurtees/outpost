@@ -1,4 +1,5 @@
 require_relative '../services/lichess_client.rb'
+require 'pgn'
 
 class DashboardController < ApplicationController
     def index
@@ -23,5 +24,15 @@ class DashboardController < ApplicationController
         end
     end
     def review
+    end
+
+    def fen
+        game = PGN.parse(File.read('app/pgn.pgn')).first
+        game_fens = []
+        game.positions.each do |position|
+            game_fens.append(position.to_fen.to_s)
+        end
+        @fens = game_fens.to_json.html_safe
+        render :json => {"response" => @fens}
     end
 end
