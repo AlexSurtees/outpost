@@ -1,0 +1,17 @@
+<div class='p-5 w-7/12 flex items-center justify-between hover:bg-background-secondary group rounded-md'>
+    <div>
+        <div class='items-center group'>
+            <h1 class='text-sub-heading group-hover:text-navigation font-paragraph text-3xl flex items-center p-1 gap-3'> 
+                <%= icon.html_safe %>
+                <%= local_assigns[:title] %> 
+                <%= local_assigns[:played] %> /
+                <%= local_assigns[:target] %>
+                </h1>
+        </div>
+        <div class='pl-2 text-sm font-paragraph group-hover:text-navigation text-sub-heading'> 
+            <%= local_assigns [:description] %>
+        </div>
+    </div>
+    <i class='text-5xl font-paragraph fa-solid fa-arrow-right text-sub-heading group-hover:text-navigation flex justify-end'>
+    </i>
+</div>

@@ -1,0 +1,17 @@
+<h1 class='font-header text-5xl text-[#732a49] pb-10'> Outpost. An opinionated tool for chess improvement. </h1>
+<div class='text-justify w-10/12'>
+<p class='font-paragraph text-zinc-700 pb-5'>
+    Outpost is a completely free tool that automatically sets goals, tracks your progress, and generates insights
+    about your gameplay. Outpost comes out-of-the-box with everything you need to get started, immediately. Heard enough?
+</div>
+<div class='w-10/12 grid grid-cols-2 pt-10 gap-10'>
+        <%= link_to "<div class='h-24 w-full flex items-center justify-center
+         hover:bg-background-secondary-dark font-paragraph rounded-md text-navigation bg-background-secondary text-4xl'> Get started </div>".html_safe, 
+         if current_user
+            "/dashboard"
+         else
+            "/users/sign_up" 
+        end
+            %>
+        <%= link_to "<div class='hover:bg-[#732a49] hover:text-navigation hover:border-none h-24 w-full flex items-center justify-center font-paragraph border-2 border-zinc-700 rounded-md text-zinc-700 bg-background-main text-4xl'> Learn more </div>".html_safe, "/about/detail" %>
+</div>

@@ -1,0 +1,31 @@
+        <div class='flex items-center justify-between'>
+                <div class='font-header text-5xl text-[#732a49]'> Objectives | </div> 
+                        <div class='text-sm font-paragraph text-zinc-700 pt-6 pl-1'> w/c <%= @date %> </div>
+        </div>
+        <div class='grid items-center justify-left gap-1 pt-10'>
+                <%= render partial: "goal", locals: {
+                        title: 'Practice',
+                        played: @games_played, 
+                        target: @target, 
+                        icon: '<i class="text-sub-heading group-hover:text-navigation fa-solid fa-chess-board"></i>',
+                        description: 'Play 3 games of at least 15|10'
+                        
+                        } 
+                        %>
+                <%= render partial: "goal", locals: {
+                        title: 'Reflect',
+                        target: @target, 
+                        played: @reviews_count, 
+                        icon: '<i class=" text-sub-heading group-hover:text-navigation fa-solid fa-book-open"></i>',
+                        description: 'Review 3 games'
+                        }
+                        %>
+                <%= render partial: "goal", locals: {
+                        title: 'Calculate', 
+                        target: @puzzle_target, 
+                        played: @puzzles_count, 
+                        icon: '<i class=" text-sub-heading group-hover:text-navigation fa-solid fa-puzzle-piece"></i>',
+                        description: 'Solve 25 puzzles'
+                        }
+                         %>
+        </div>

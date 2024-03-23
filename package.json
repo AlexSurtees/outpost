@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "chessground": "^9.0.4",
+    "esbuild": "^0.20.2"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+  }
+}
