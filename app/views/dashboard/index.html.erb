@@ -8,7 +8,8 @@
                         played: @games_played, 
                         target: @target, 
                         icon: '<i class="text-sub-heading group-hover:text-navigation fa-solid fa-chess-board"></i>',
-                        description: 'Play 3 games of at least 15|10'
+                        description: 'Play 3 games of at least 15|10',
+                        destination: 'https://lichess.org'
                         
                         } 
                         %>
@@ -17,7 +18,8 @@
                         target: @target, 
                         played: @reviews_count, 
                         icon: '<i class=" text-sub-heading group-hover:text-navigation fa-solid fa-book-open"></i>',
-                        description: 'Review 3 games'
+                        description: 'Review 3 games',
+                        destination: '/dashboard/review'
                         }
                         %>
                 <%= render partial: "goal", locals: {
@@ -25,7 +27,8 @@
                         target: @puzzle_target, 
                         played: @puzzles_count, 
                         icon: '<i class=" text-sub-heading group-hover:text-navigation fa-solid fa-puzzle-piece"></i>',
-                        description: 'Solve 25 puzzles'
+                        description: 'Solve 25 puzzles',
+                        destination: 'https://lichess.org/training'
                         }
                          %>
         </div>
